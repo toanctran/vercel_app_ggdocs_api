@@ -20,6 +20,10 @@ docs_service = build('docs', 'v1', credentials=creds)
 drive_service = build('drive', 'v3', credentials=creds)
 # Create a FastAPI app
 app = FastAPI()
+@app.get("/")
+async def root():
+  return{"message":"Created by Tran Chi Toan - chitoantran@gmail.com"}
+
 
 # Define the Pydantic model for request body
 class CreateGoogleDocRequest(BaseModel):
