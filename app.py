@@ -7,8 +7,7 @@ from typing import List
 from fastapi import FastAPI, HTTPException, Body, Query
 import io
 import json
-from dotenv import load_dotenv
-load_dotenv()
+
 
 # Create a service object to interact with the Drive API
 SERVICE_ACCOUNT_JSON_PATH = json.loads(os.getenv("GOOGLE_SHEETS_JSON_KEY_CONTENTS"))
